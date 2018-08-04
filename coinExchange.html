@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>api tests</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="js/jsonQ.js" type="text/javascript"></script>
+	<script src="js/scripts_coinExchange.js" type="text/javascript"></script>
+	<link href="css/styles.css" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+
+
+<div id="searchInformation">
+	<form>
+		<div class="inputField">
+			<label>lowest marketcap</label>
+			<input id="marketcap_low" type="text" value="20000" />
+		</div>
+		<div class="inputField">
+			<label>highest marketcap</label>
+			<input id="marketcap_high" type="text" value="5000000" />
+		</div>
+		<div class="inputField">
+			<label>volume / marketcap % (2% default)</label>
+			<input id="volumeToMarketcap" type="text" value="2" />
+		</div>
+		<div class="inputField">
+			<label>max total coins</label>
+			<input id="maxTotalCoins" type="text" value="10000000" />
+		</div>
+		<div class="inputField" style="display:none;">
+			<div class="selectGreenOrRed"><span class="redGreenSelectText">See only daily red coins</span><span class="checkboxHolder"><input class="radioInput" type="radio" name="allCoins" value="redCoins"></span></div>
+			<div class="selectGreenOrRed"><span class="redGreenSelectText">See only daily green coins</span><span class="checkboxHolder"><input class="radioInput" type="radio" name="allCoins" value="greenCoins"></span></div>
+			<div class="selectGreenOrRed"><span class="redGreenSelectText">See all coins</span><span class="checkboxHolder"><input class="radioInput" type="radio" name="allCoins" value="allCoins" checked></div>
+		</div>
+		<div class="clearFloats"></div>
+
+	</form>
+		<div id="totalCoinsScanned"></div>
+		<div id="totalCoinsSelected"></div>
+		<div id="runQuery">run</div>
+</div>
+
+<div id="display" class="hidden"></div>
+<div class="clearFloats"></div>
+</body>
+</html>

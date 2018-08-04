@@ -1,0 +1,17 @@
+@media (max-width: 768px) { 
+	#searchInformation{
+		position: relative;
+		width:100%;
+		margin-right:0px;
+	}
+	#coinResults{
+		position: relative;
+		width:100%;
+	}
+	.coinHeadline{
+		display: none;
+	}
+	.coinPrice, .coinVolume, .coinMarketCap, .coinSupplyAvailable, .coinSupplyTotal, .coinSupplyMax, .coinRank, .coinSymbol, .sorter {
+		width: 50%;
+	}
+}

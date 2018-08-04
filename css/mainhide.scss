@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'Arial', sans-serif;
+    src: url('../fonts/DINPro-Bold.eot');
+    src: url('../fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Bold.woff2') format('woff2'),
+        url('../fonts/DINPro-Bold.woff') format('woff'),
+        url('../fonts/DINPro-Bold.ttf') format('truetype'),
+        url('../fonts/DINPro-Bold.svg#DINPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial', sans-serif;
+    src: url('../fonts/DINPro-Medium.eot');
+    src: url('../fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Medium.woff2') format('woff2'),
+        url('../fonts/DINPro-Medium.woff') format('woff'),
+        url('../fonts/DINPro-Medium.ttf') format('truetype'),
+        url('../fonts/DINPro-Medium.svg#DINPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial', sans-serif;
+    src: url('../fonts/DINPro-Regular.eot');
+    src: url('../fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Regular.woff2') format('woff2'),
+        url('../fonts/DINPro-Regular.woff') format('woff'),
+        url('../fonts/DINPro-Regular.ttf') format('truetype'),
+        url('../fonts/DINPro-Regular.svg#DINPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial', sans-serif;
+    src: url('../fonts/DINPro-Light.eot');
+    src: url('../fonts/DINPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Light.woff2') format('woff2'),
+        url('../fonts/DINPro-Light.woff') format('woff'),
+        url('../fonts/DINPro-Light.ttf') format('truetype'),
+        url('../fonts/DINPro-Light.svg#DINPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+$black : #000000;
+$lightGrey : #dedede;
+$grey : #666666;
+$red : #990000;
+$green : #008000;
+
+
+// globals
+*{
+	box-sizing: border-box;
+}
+a{
+	color:$red;
+	text-decoration: none;
+}
+a:hover{
+	color:$black;
+}
+.bold{
+	font-weight: bold;
+}
+ul, li, h2{
+	margin:0px;
+	padding:0px;
+}
+.green{
+	color: $green;
+}
+.red{
+	color: $red;
+}
+.clearFloats{
+	clear:both;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+
+
+// top level
+body{
+	color: $grey;
+	font-family: 'Arial', sans-serif;
+	font-size: 10px;
+	margin:0px;
+	padding:0px;
+}
+header{
+	position: relative;
+	top:0px;
+	width: 100%;
+	height:40;
+	padding: 10px;
+	border-bottom:2px solid #ffffff;
+	background-color:#000000;
+}
+#searchInformation{
+	position: relative;
+	top:0px;
+	width: 100%;
+	height:auto;
+	padding: 10px 0px;
+	margin-bottom: 10px;
+	background-color: #001a33;
+	color: #cccccc;
+	box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+}
+#coinResults{
+	width:100%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+
+// search information styles
+#searchHeader{
+	text-align: left;
+	line-height:14px;
+}
+#logo-cryptopia{
+	width:100%;
+	padding-bottom:10px;
+}
+
+// all filters styles
+#allFilters{}
+.inputField{
+	position: relative;
+	background-color: #000000;
+	margin: 5px 0px 0px 0px;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.4s; /* Safari */
+    transition: all 0.4s;
+}
+.inactive.inputField{
+	background-color: #000000;
+}
+.active.inputField{
+	background-color: #ffffff;
+}
+
+.endOfCluster{
+	margin-bottom:20px;
+}
+
+label{
+	padding-right:25px;
+	display: block;
+	width:100%;
+	box-sizing: border-box;
+	-webkit-transition: all 0.4s; /* Safari */
+    transition: all 0.4s;
+}
+.inactive label{
+	color:white;
+	font-weight: normal;
+}
+.active label{
+	color:black;
+	font-weight: bold;
+}
+.inactive label.switch{
+	opacity:1;
+}
+input{
+	height:22px;
+	margin-top: 5px;
+	display: block;
+	width:100%;
+	box-sizing: border-box;
+	-webkit-transition: all 0.25s; /* Safari */
+    transition: all 0.25s;
+}
+.inactive input.satoshis, .inactive input.numbers, .inactive input.dollars, .inactive input.litoshis, .inactive input.dogeshi, .inactive .selectize-control{
+	pointer-events: none;
+	display: none;
+}
+.filterSeparator{
+	width: 100%;
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+}
+button#runQuery:hover{
+	color:#c5120b;
+}
+#runQuery{
+	padding-top:30px;
+	margin-top:30px;
+	border-top:1px solid #333333;
+	font-size:18px;
+	width:130px;
+}
+button#runQuery {
+	color:#ffffff;
+}
+
+
+.marketSelectors{
+	padding-right:20px;
+}
+    
+    
+    
+    
+// coin results styles
+
+.cell a{
+	color:#000000;
+	text-decoration-color: rgb(188, 9, 9);
+}
+.cell a:hover{
+	color:#bc0909;
+	text-decoration-color: rgb(0, 0, 0);
+}
+.coinChange_cryptopia{
+	text-align:center;
+}
+
+
+#resultsHeader{
+	border-bottom: 5px solid #000000;
+	padding-bottom: 5px;
+}
+.sorter, .cell{
+	float: left;
+	width:10%;
+	margin-right:1%;
+	padding-left:5px;
+}
+#resultsHeader li{
+	list-style: none;
+	
+		
+}
+button {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    background: none;
+    color: $black;
+    font-weight: bold;
+    	
+    cursor: pointer;
+    text-align: left;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+button:hover{
+   	color: $red;
+}
+.list li{
+	list-style: none;
+}
+
+.coinInfo{
+	background-color: $lightGrey;
+	border-bottom: 1px solid $grey;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.selectGreenOrRed{
+	display: block;
+	width: 100%;
+	padding-bottom:5px;
+}
+.checkboxHolder{
+	width:30px;
+	position: absolute;
+	right: 0px;
+}
+.checkboxHolder input{
+	margin:0px;
+	padding: 0px;
+	width: 18px;
+	height: 18px;
+}
+button:hover{
+	color:#c5120b;
+}
+#runQuery{
+	border-top:1px solid #333333;
+	font-size:18px;
+	width:100%;
+	padding-top: 10px;
+	margin-top: 20px;
+}
+
+
+
+
+
+#resultsInformation{
+	font-family: arial, helvetica, sans-serif;
+	font-size:11px;
+	line-height:16px;
+}
+
+
+.coinCMClink{
+  padding-top: 10px;
+  font-weight: bold;
+  border-top: solid 1px #ffffff;
+  margin-top: 10px;
+}
+.coinCMClink a{
+	color:#c5120b;
+	text-decoration: none;
+}
+.coinCMClink a:hover{
+	color:#000000;
+	text-decoration: none;
+}
+.movement{
+	display: block;
+	font-size:9px;
+	font-family: arial, helvetica;
+}
+.or{
+	position: relative;
+	height: 10px;
+	padding-left: 5px;
+}
+
+
+
+// slider styles and animation
+.switch {
+  position: absolute;
+  top:5px;
+  right:5px;
+  display: inline-block;
+  width: 30px;
+  height: 13px;
+  font-family: arial, helvetica, sans-serif;
+}
+/*
+.inactive .switch:before {
+	content: "disabled";
+	font-size: 8px;
+	top: -10px;
+	position: absolute;
+	right: 0px;
+	width: 30px;
+}
+.active .switch:before {
+	content: "enabled";
+}
+*/
+.switch input {display:none;}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider.round {
+  border-radius: 3px;
+}
+
+.slider.round:before {
+  border-radius: 2px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 9px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #454545;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	background-color: #ffffff;
+	-webkit-transform: translateX(17px);
+	-ms-transform: translateX(17px);
+	transform: translateX(17px);
+}
+
+
+
+
+.symbol-lrg{
+	font-size:60px;
+}
+
+.Columns_5{
+	float: left;
+	width:20%;
+}
